@@ -35,7 +35,13 @@ shopt -s nocaseglob
 bind 'set completion-ignore-case on'
 
 # I'll need this if it doesn't already exist.
-[ ! -d ~/bin ] && mkdir ~/bin
+custom_dirs=(
+    "bin"
+    "Workspace"
+)
+for name in ${custom_dirs[@]}; do
+    [ ! -d "~/$name" ] && mkdir "~/$name"
+done
 
 # Complicated initialization, extracted to separate modules for readability.
 # Order matters.
