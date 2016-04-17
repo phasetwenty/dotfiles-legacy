@@ -61,5 +61,5 @@ done
 
 # Applications
 for app in ~/.bash/applications/*; do
-  . ~/.bash/applications/$app
+  . $app
 done
