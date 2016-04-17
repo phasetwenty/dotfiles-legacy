@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# Don't do anything if:
+# * screen isn't available
+type screen &>/dev/null
+[ $? -ne 0  ] && return
+# * this is not SSH
+[ -z "$SSH_CONNECTION" ] && return
+# * screen is already running
+[ "$TERM" = "screen" ] && return
+
+screen -d -RR

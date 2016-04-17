@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# Relies on the fact that git will execute anything named git-(.*) when you run it as git \1
+#
+# $1 PR #
+#
+git fetch origin refs/pull-requests/$1/from:refs/remotes/origin/pr/$1/from
+git checkout refs/remotes/origin/pr/$1/from

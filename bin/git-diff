@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# I believe this needs to be extracted to a script because you can't access the args in the
+# .gitconfig? Look it up someday.
+/usr/bin/opendiff "$2" "$5" -merge "$1"

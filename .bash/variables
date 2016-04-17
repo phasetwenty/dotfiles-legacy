@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# Setup global variables that I use or use downstream
+export EDITOR=vim
+
+[ -d "$HOME/Workspace/repos" ] && export REPOS="$HOME/Workspace/repos"
+
+export LS_CMD="$(type -P ls) -G --group-directories-first --color=always"

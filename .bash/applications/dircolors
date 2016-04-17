@@ -1,0 +1,3 @@
+#!/bin/bash
+#
+dircolors -b &>/dev/null

@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+type -P virtualenvwrapper.sh &>/dev/null
+[ $? -eq 0 ] && . virtualenvwrapper.sh
