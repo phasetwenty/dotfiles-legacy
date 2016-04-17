@@ -32,3 +32,6 @@ Temporary Items
 *.iml
 out
 gen
+
+# It should ignore itself. Be sure to update this if changing the directory name
+.dotfiles-repo

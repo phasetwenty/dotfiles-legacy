@@ -6,3 +6,6 @@ export EDITOR=vim
 [ -d "$HOME/Workspace/repos" ] && export REPOS="$HOME/Workspace/repos"
 
 export LS_CMD="$(type -P ls) -G --group-directories-first --color=always"
+
+# Useful for creating the remote on new systems.
+export DOTFILES_REMOTE="https://github.com/phasetwenty/dotfiles.git"
