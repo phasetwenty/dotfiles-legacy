@@ -40,7 +40,7 @@ custom_dirs=(
     "Workspace"
 )
 for name in ${custom_dirs[@]}; do
-    [ ! -d "~/$name" ] && mkdir "~/$name"
+    [ ! -d "$HOME/$name" ] && mkdir "$HOME/$name"
 done
 
 # Complicated initialization, extracted to separate modules for readability.
