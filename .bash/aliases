@@ -10,6 +10,11 @@ alias lhl='ls_with_arg -hl'
 # Trailing space is load-bearing!
 alias s='sudo '
 
+alias agi='sudo apt-get install '
+alias update='sudo apt-get update && sudo apt-get upgrade'
+
+alias netstat="/bin/netstat -a --numeric-ports"
+
 ls_with_arg() {
   # $1 ls args
   # $2 target or empty
