@@ -13,6 +13,7 @@
 [color]
 	ui = true
 [core]
+	excludesfile = /home/chaverman/.gitrc/gitignore_global
 	pager = less
 ; May be necessary?
 ;[diff]
