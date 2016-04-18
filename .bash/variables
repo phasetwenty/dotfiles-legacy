@@ -5,7 +5,19 @@ export EDITOR=vim
 
 [ -d "$HOME/Workspace/repos" ] && export REPOS="$HOME/Workspace/repos"
 
-export LS_CMD="$(type -P ls) -G --group-directories-first --color=always"
+LS_CMD_set () {
+    # Ensures that our `ls` command is the one that can group directories. If it's not available, an error message is
+    # printed. End result is that LS_CMD is set.
+    #
+    local path=$(type -P gls)
+    if [ $? ]; then
+        export LS_CMD="$path -G --group-directories-first --color=always"
+        return
+    fi
+    >&2 echo "gls missing; no directory grouping is possible."
+    export LS_CMD="/bin/ls -G --color=always"
+}
+LS_CMD_set
 
 # Useful for creating the remote on new systems.
 export DOTFILES_REMOTE="https://github.com/phasetwenty/dotfiles.git"
