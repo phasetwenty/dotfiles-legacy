@@ -1,8 +1,0 @@
-#!/bin/bash
-#
-type trash-put &>/dev/null
-if [ $? -eq 0 ]; then
-  alias trash='trash-put'
-else
-  >&2 echo "trash-cli not installed on this system."
-fi
