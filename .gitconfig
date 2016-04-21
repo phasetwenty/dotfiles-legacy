@@ -9,6 +9,7 @@
 	ft = !git fetch && git status
 	lg = log
 	st = status
+	upstream = branch --set-upstream-to
 [mergetool]
 	keepBackup = true
 [color]
