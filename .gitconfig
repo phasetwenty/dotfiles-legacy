@@ -5,9 +5,11 @@
 	alias = !git config --get-regexp 'alias.*'
     cdup = !cd $(git rev-parse --show-cdup)
 	co = checkout
+	diffhead = diff HEAD^ HEAD
 	ft = !git fetch && git status
 	lg = log
 	st = status
+	upstream = branch --set-upstream-to
 [mergetool]
 	keepBackup = true
 [color]
