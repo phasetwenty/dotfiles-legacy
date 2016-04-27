@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# Wraps the arguments to public-key.py into a basic command.
+#
+# $1: The host to setup the public key on.
+#
+fab -f public-key.py --hosts=$1 public_key
