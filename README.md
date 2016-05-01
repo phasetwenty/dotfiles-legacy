@@ -27,6 +27,12 @@ Last, check out your platform's branch:
     
 I recommend restarting the shell to apply the full set of dotfiles.
 
+## Repo problems
+
+I've experienced a problem with the default fetch behavior on new repos. git is not setting up to fetch branches as I'd want. To resolve this, run this command:
+
+    dotfiles config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+
 # Notes
 
 ## ~/.bash
