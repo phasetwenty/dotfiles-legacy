@@ -4,6 +4,7 @@
 export EDITOR=vim
 
 [ -d "$HOME/Workspace/repos" ] && export REPOS="$HOME/Workspace/repos"
+[ -d "$HOME/Library/Android/sdk" ] && export ANDROID_HOME="$HOME/Library/Android/sdk"
 
 LS_CMD_set () {
     # Ensures that our `ls` command is the one that can group directories. If it's not available, an error message is
