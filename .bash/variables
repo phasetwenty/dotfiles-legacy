@@ -3,7 +3,10 @@
 # Setup global variables that I use or use downstream
 export EDITOR=vim
 
-[ -d "$HOME/Workspace/repos" ] && export REPOS="$HOME/Workspace/repos"
+if [ -d "$HOME/Workspace/repos" ]; then
+    export REPOS="$HOME/Workspace/repos"
+    export GUARD_DIR="$REPOS"
+fi
 
 export LS_CMD="$(type -P ls) -G --group-directories-first --color=always"
 
