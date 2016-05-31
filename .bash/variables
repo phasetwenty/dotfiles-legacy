@@ -5,6 +5,12 @@ export EDITOR=vim
 
 [ -d "$HOME/Library/Android/sdk" ] && export ANDROID_HOME="$HOME/Library/Android/sdk"
 
+if [ -d "/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home" ]; then
+	export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home"
+else
+	>&2 echo "JAVA_HOME of \"/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home\" does not exist. Atlassian SDK commands will not work." 
+fi
+
 if [ -d "$HOME/Workspace/repos" ]; then
     export REPOS="$HOME/Workspace/repos"
     export GUARD_DIR="$REPOS"
