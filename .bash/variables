@@ -44,7 +44,7 @@ READ_AWS_KEYS () {
 		>&2 echo "~/.aws_access_keys missing, cannot import AWS keys."
 	fi
 
-	AWS_PUBLIC_KEY=$(jq -rM .public "$HOME/.aws_access_keys")
-    AWS_PRIVATE_KEY=$(jq -rM .private "$HOME/.aws_access_keys")
+	export AWS_PUBLIC_KEY=$(jq -rM .public "$HOME/.aws_access_keys")
+	export AWS_PRIVATE_KEY=$(jq -rM .private "$HOME/.aws_access_keys")
 }
 READ_AWS_KEYS
