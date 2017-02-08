@@ -4,5 +4,5 @@
 #
 # $1 PR #
 #
-git fetch origin refs/pull-requests/$1/from:refs/remotes/origin/pr/$1/from
+git fetch --force origin refs/pull-requests/$1/from:refs/remotes/origin/pr/$1/from
 git checkout refs/remotes/origin/pr/$1/from

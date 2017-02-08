@@ -42,6 +42,7 @@ READ_AWS_KEYS () {
 		return
 	elif [ ! -f "$HOME/.aws_access_keys" ]; then
 		>&2 echo "~/.aws_access_keys missing, cannot import AWS keys."
+		return
 	fi
 
 	export AWS_PUBLIC_KEY=$(jq -rM .public "$HOME/.aws_access_keys")
