@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export DEST="$DROPBOX"
+export DEST="$DROPBOX/Backup"
 export EXCLUDE_FILE="$HOME/.sync-to-dropbox-files"
 
 if [ ! -f "$EXCLUDE_FILE" ]; then
