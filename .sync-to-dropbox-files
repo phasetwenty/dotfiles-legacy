@@ -1,0 +1,12 @@
+*.class
+*.jar
+.DS_Store
+.git
+.idea
+.metadata
+.sass-cache
+_built
+images
+node_modules
+Microsoft User Data
+vendor

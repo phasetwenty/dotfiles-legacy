@@ -1,0 +1,12 @@
+#!/bin/bash
+
+export DEST="$DROPBOX"
+export EXCLUDE_FILE="$HOME/.sync-to-dropbox-files"
+
+if [ ! -f "$EXCLUDE_FILE" ]; then
+  >&2 echo "Excludes file is missing, refusing to sync."
+  exit 1
+fi
+
+rsync -Lavz --delete --exclude-from "$EXCLUDE_FILE" "$HOME/Documents/" "$DEST/Documents"
+rsync -Lavz --delete --exclude-from "$EXCLUDE_FILE" "$REPOS/" "$DEST/repos/"
