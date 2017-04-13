@@ -64,7 +64,6 @@ for file in ${interactive_shell_init_files[@]}; do
   fi
 done
 
-
 # Applications
 for app in ~/.bash/applications/*; do
   . $app

@@ -5,7 +5,7 @@ paths=(
     "/usr/local/bin"
     "$HOME/.composer/vendor/bin"
     "$HOME/.rvm/bin"
-	"/usr/local/sbin"
+	  "/usr/local/sbin"
     "/usr/bin"
     "/usr/sbin"
     "/bin"
