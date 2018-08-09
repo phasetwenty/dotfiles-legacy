@@ -1,0 +1,7 @@
+#!/bin/bash
+
+PATH_BASE="$HOME/.m2/repository"
+
+[ -d "$PATH_BASE/com/hotpads" ] && rm -rf "$PATH_BASE/com/hotpads/*"
+rm -rf "$PATH_BASE/org/mockito/mockito-all"
+rm -rf "$PATH_BASE/org/mockito/mockito-core/1*"

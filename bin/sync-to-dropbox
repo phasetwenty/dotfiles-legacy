@@ -10,3 +10,4 @@ fi
 
 rsync -Lavz --delete --exclude-from "$EXCLUDE_FILE" "$HOME/Documents/" "$DEST/Documents"
 rsync -Lavz --delete --exclude-from "$EXCLUDE_FILE" "$REPOS/" "$DEST/repos/"
+rsync -Lavz --delete --exclude-from "$EXCLUDE_FILE" "$HOME/Interviews/" "$DEST/Interviews/"

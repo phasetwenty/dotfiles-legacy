@@ -8,12 +8,17 @@ export EDITOR=vim
 [ -d "$HOME/Dropbox (Zillow Group)" ] && export DROPBOX="$HOME/Dropbox (Zillow Group)"
 [ -d "$HOME/Workspace" ] && export WORKSPACE="$HOME/Workspace"
 [ -d "$WORKSPACE/repos" ] && export REPOS="$WORKSPACE/repos"
+[ -d "$WORKSPACE/hotpads" ] && export HP="$WORKSPACE/hotpads"
 
-if [ -d "/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home" ]; then
-	export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home"
-else
-	>&2 echo "JAVA_HOME of \"/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home\" does not exist. Atlassian SDK commands will not work." 
-fi
+SET_JAVA_HOME() {
+	local java_home="/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home"
+	if [ -d "$java_home" ]; then
+		export JAVA_HOME="$java_home"
+	else
+		>&2 echo "JAVA_HOME of $java_home does not exist (Atlassian SDK commands will not work)."
+	fi
+}
+SET_JAVA_HOME
 
 if [ -d "$HOME/Workspace/repos" ]; then
     export REPOS="$HOME/Workspace/repos"

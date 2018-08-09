@@ -13,6 +13,6 @@ nvm_init () {
     export NVM_DIR="$path_to_nvm_home"
 	. "$path_to_nvm_sh"
 
-	nvm use v4.7.2 >/dev/null
+	nvm use stable >/dev/null
 }
 nvm_init

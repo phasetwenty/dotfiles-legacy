@@ -23,3 +23,8 @@ ls_with_arg() {
     $LS_CMD $1 "$2" | less
   fi
 }
+
+hex_string() {
+  # $1 length
+  cat /dev/urandom | env LC_CTYPE=C tr -cd 'a-f0-9' | head -c "$1"
+}

@@ -1,13 +1,15 @@
 [user]
 	name = Christopher Haverman
-	email = chaverma@alumni.uci.edu
+	email = chaverman@trulia.com
 [alias]
 	alias = !git config --get-regexp 'alias.*'
+	amend-quick = commit -a --amend --no-edit
     cdup = !cd $(git rev-parse --show-cdup)
 	co = checkout
 	diffhead = diff HEAD^ HEAD
 	ft = !git fetch && git status
 	lg = log
+    mkmaster =  checkout -b master origin/master
 	st = status
 	upstream = branch --set-upstream-to
 [mergetool]

@@ -68,3 +68,8 @@ done
 for app in ~/.bash/applications/*; do
   . $app
 done
+
+# Hotpads additions
+# bash_completion initialization.
+# [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+. "$HOME/.bash/bash_hotpads_mac"
