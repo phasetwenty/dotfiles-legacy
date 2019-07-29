@@ -3,5 +3,9 @@
 PATH_BASE="$HOME/.m2/repository"
 
 [ -d "$PATH_BASE/com/hotpads" ] && rm -rf "$PATH_BASE/com/hotpads/*"
-rm -rf "$PATH_BASE/org/mockito/mockito-all"
-rm -rf "$PATH_BASE/org/mockito/mockito-core/1*"
+rm -rf "$PATH_BASE"/org/mockito/mockito-all
+rm -rf "$PATH_BASE"/org/mockito/mockito-core/1*
+rm -rf "$PATH_BASE"/org/apache/avro/avro/1.7*
+
+GUAVA_ROOT="$PATH_BASE/com/google/guava/guava"
+find "$GUAVA_ROOT" -type d -not -name 27.1-jre -maxdepth 1 -not -path "$GUAVA_ROOT" -exec rm -rf {} \;

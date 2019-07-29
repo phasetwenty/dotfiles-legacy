@@ -3,20 +3,24 @@
 # Setup global variables that I use or use downstream
 export EDITOR=vim
 
-[ -d "$HOME/Library/Android/sdk" ] && export ANDROID_HOME="$HOME/Library/Android/sdk"
+if [ ! -d "$HOME/Workspace" ]; then
+	mkdir "$HOME/Workspace"
+fi
+export WORKSPACE="$HOME/Workspace"
 
-[ -d "$HOME/Dropbox (Zillow Group)" ] && export DROPBOX="$HOME/Dropbox (Zillow Group)"
-[ -d "$HOME/Google Drive (chaverman@zillowgroup.com)" ] && export GDRIVE_ZG="$HOME/Google Drive (chaverman@zillowgroup.com)"
-[ -d "$HOME/Workspace" ] && export WORKSPACE="$HOME/Workspace"
 [ -d "$WORKSPACE/repos" ] && export REPOS="$WORKSPACE/repos"
 [ -d "$WORKSPACE/hotpads" ] && export HP="$WORKSPACE/hotpads"
+[ -d "$WORKSPACE/hotpads/trulia/rent-payment" ] && export RP="$WORKSPACE/hotpads/trulia/rent-payment"
+[ -d "$HOME/Google Drive (chaverman@zillowgroup.com)" ] && export GDRIVE_ZG="$HOME/Google Drive (chaverman@zillowgroup.com)"
+[ -d "$HOME/Dropbox (Zillow Group)" ] && export DROPBOX="$HOME/Dropbox (Zillow Group)"
+[ -d "$HOME/Library/Android/sdk" ] && export ANDROID_HOME="$HOME/Library/Android/sdk"
 
 SET_JAVA_HOME() {
-	local java_home="/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home"
+	local java_home="$(/usr/libexec/java_home)"
 	if [ -d "$java_home" ]; then
 		export JAVA_HOME="$java_home"
 	else
-		>&2 echo "JAVA_HOME of $java_home does not exist (Atlassian SDK commands will not work)."
+		>&2 echo "JAVA_HOME of $java_home does not exist; several java things will not work." 
 	fi
 }
 SET_JAVA_HOME
