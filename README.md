@@ -1,6 +1,6 @@
 # dotfiles
 
-Inspired by the method described at https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/. I'm extending this pattern by using branches to encapsulate the differences between platforms, with `master` containing pieces common to all supported platforms. I also have a homebrew pattern for breaking up the initialization into organized modules.
+Inspired by the method described at https://www.atlassian.com/git/tutorials/dotfiles. I'm extending this pattern by using branches to encapsulate the differences between platforms, with `master` containing pieces common to all supported platforms. I also have a homebrew pattern for breaking up the initialization into organized modules.
 
 # Setting up a new host
 
