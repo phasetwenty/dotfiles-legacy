@@ -12,7 +12,6 @@ export WORKSPACE="$HOME/Workspace"
 [ -d "$WORKSPACE/hotpads" ] && export HP="$WORKSPACE/hotpads"
 [ -d "$WORKSPACE/hotpads/transactions/rent-payment" ] && export RP="$WORKSPACE/hotpads/transactions/rent-payment"
 [ -d "$HOME/Google Drive (chaverman@zillowgroup.com)" ] && export GDRIVE_ZG="$HOME/Google Drive (chaverman@zillowgroup.com)"
-[ -d "$HOME/Dropbox (Zillow Group)" ] && export DROPBOX="$HOME/Dropbox (Zillow Group)"
 [ -d "$HOME/Library/Android/sdk" ] && export ANDROID_HOME="$HOME/Library/Android/sdk"
 
 SET_JAVA_HOME() {
