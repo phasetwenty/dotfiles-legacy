@@ -1,6 +1,6 @@
 [user]
 	name = Christopher Haverman
-	email = chaverman@trulia.com
+	email = chaverman@zillowgroup.com
 [alias]
 	alias = !git config --get-regexp 'alias.*'
 	amend-quick = commit -a --amend --no-edit
