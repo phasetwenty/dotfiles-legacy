@@ -14,6 +14,9 @@ export WORKSPACE="$HOME/Workspace"
 [ -d "$HOME/Google Drive (chaverman@zillowgroup.com)" ] && export GDRIVE_ZG="$HOME/Google Drive (chaverman@zillowgroup.com)"
 [ -d "$HOME/Library/Android/sdk" ] && export ANDROID_HOME="$HOME/Library/Android/sdk"
 
+# Added by rental platform
+CATALINA_OUT_DIR=/var/log/datarouter
+
 SET_JAVA_HOME() {
 	local java_home="$(/usr/libexec/java_home)"
 	if [ -d "$java_home" ]; then

@@ -6,3 +6,4 @@ if [ ! -f ~/.bash/init ]; then
 else
   . ~/.bash/init
 fi
+
